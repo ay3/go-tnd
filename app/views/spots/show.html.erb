@@ -52,7 +52,7 @@
 
 <p>
   <strong>Picture:</strong>
-  <%= @spot.picture %>
+  <%= image_tag(@spot.picture_url, width: 400) if @spot.picture.present? %>
 </p>
 
 <p>
