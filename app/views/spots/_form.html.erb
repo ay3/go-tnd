@@ -1,0 +1,77 @@
+<%= form_for(spot) do |f| %>
+  <% if spot.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(spot.errors.count, "error") %> prohibited this spot from being saved:</h2>
+
+      <ul>
+      <% spot.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :prefectures %>
+    <%= f.text_field :prefectures %>
+  </div>
+
+  <div class="field">
+    <%= f.label :postcode %>
+    <%= f.number_field :postcode %>
+  </div>
+
+  <div class="field">
+    <%= f.label :address %>
+    <%= f.text_field :address %>
+  </div>
+
+  <div class="field">
+    <%= f.label :mapcode %>
+    <%= f.number_field :mapcode %>
+  </div>
+
+  <div class="field">
+    <%= f.label :lat %>
+    <%= f.text_field :lat %>
+  </div>
+
+  <div class="field">
+    <%= f.label :lng %>
+    <%= f.text_field :lng %>
+  </div>
+
+  <div class="field">
+    <%= f.label :access %>
+    <%= f.text_area :access %>
+  </div>
+
+  <div class="field">
+    <%= f.label :category %>
+    <%= f.text_field :category %>
+  </div>
+
+  <div class="field">
+    <%= f.label :url %>
+    <%= f.text_area :url %>
+  </div>
+
+  <div class="field">
+    <%= f.label :picture %>
+    <%= f.text_field :picture %>
+  </div>
+
+  <div class="field">
+    <%= f.label :memo %>
+    <%= f.text_area :memo %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
