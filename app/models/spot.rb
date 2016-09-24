@@ -22,12 +22,12 @@ class Spot < ApplicationRecord
   validates :memo,        length: { maximum: 500 }
 
   #validates :picture, format: { with: /JPG/ }
-  validate :check_picture
+  #validate :check_picture
 
-  def check_picture
-      if file.size > 1.megabyte
-        errors.add(:picture, "1MBまでアップロードできます")
-      end
-  end
+  #def check_picture
+  #    if file.size > 1.megabyte
+  #      errors.add(:picture, "1MBまでアップロードできます")
+  #    end
+  #end
 
 end
