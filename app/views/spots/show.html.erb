@@ -6,15 +6,14 @@
   </div>
 
   <div class="col-md-9">
-    <p><b>Name: </b><%= @spot.name %></p>
-    <p><b>所在地: </b><%= @spot.prefectures %></p>
-    <p><b>住所: </b><%= @spot.postcode %><br><%= @spot.address %></p>
+    <h3><%= @spot.name %></h3>
+    <p><b>住所: </b><br><%= @spot.postcode %> <%= @spot.address %></p>
+    <p><b>Access: </b><br><%= @spot.access %></p>
     <p><b>Mapcode: </b><%= @spot.mapcode %></p>
     <p><b>緯度経度: </b><%= @spot.lat %> <%= @spot.lng %></p>
-    <p><b>Access: </b><br><%= @spot.access %></p>
     <p><b>Category: </b><%= @spot.category %></p>
-    <p><b>URL: </b><%= @spot.url %></p>
     <p><b>Memo: </b><%= @spot.memo %></p>
+    <p><%= link_to '参考サイト', @spot.url %></p>
 
     <p>
       <%= link_to 'Edit', edit_spot_path(@spot) %> |
