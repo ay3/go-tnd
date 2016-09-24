@@ -1,75 +1,38 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @spot.name %>
-</p>
+<div class="row">
+  <div class="col-md-9">
+    <%= image_tag(@spot.picture_url, width: 400) if @spot.picture.present? %>
+  </div>
 
-<p>
-  <strong>Prefectures:</strong>
-  <%= @spot.prefectures %>
-</p>
+  <div class="col-md-9">
+    <p><b>Name: </b><%= @spot.name %></p>
+    <p><b>所在地: </b><%= @spot.prefectures %></p>
+    <p><b>住所: </b><%= @spot.postcode %><br><%= @spot.address %></p>
+    <p><b>Mapcode: </b><%= @spot.mapcode %></p>
+    <p><b>緯度経度: </b><%= @spot.lat %> <%= @spot.lng %></p>
+    <p><b>Access: </b><br><%= @spot.access %></p>
+    <p><b>Category: </b><%= @spot.category %></p>
+    <p><b>URL: </b><%= @spot.url %></p>
+    <p><b>Memo: </b><%= @spot.memo %></p>
 
-<p>
-  <strong>Postcode:</strong>
-  <%= @spot.postcode %>
-</p>
+    <p>
+      <%= link_to 'Edit', edit_spot_path(@spot) %> |
+      <%= link_to 'Destroy', @spot, data: { confirm: '削除してもいいですか?' }, method: :delete %> |
+      <%= link_to 'Back', spots_path %>
+    </p>
+  </div>
 
-<p>
-  <strong>Address:</strong>
-  <%= @spot.address %>
-</p>
-
-<p>
-  <strong>Mapcode:</strong>
-  <%= @spot.mapcode %>
-</p>
-
-<p>
-  <strong>Lat:</strong>
-  <%= @spot.lat %>
-</p>
-
-<p>
-  <strong>Lng:</strong>
-  <%= @spot.lng %>
-</p>
-
-<p>
-  <strong>Access:</strong>
-  <%= @spot.access %>
-</p>
-
-<p>
-  <strong>Category:</strong>
-  <%= @spot.category %>
-</p>
-
-<p>
-  <strong>Url:</strong>
-  <%= @spot.url %>
-</p>
-
-<p>
-  <strong>Picture:</strong>
-  <%= image_tag(@spot.picture_url, width: 400) if @spot.picture.present? %>
-</p>
-
-<p>
-  <strong>Memo:</strong>
-  <%= @spot.memo %>
-</p>
+</div>
 
 <h3>Comments</h3>
 <% @comments.each do |comment| %>
   <div>
-    <strong><%= comment.user_name %></strong>
-    <br />
-    <p><%= comment.body %></p>
-    <p><%= link_to 'Delete', comment_path(comment), method: :delete, data: { confirm: '削除してもよろしいですか？' } %></p>
+    <p>
+      <%= comment.body %> </b><%= comment.user_name %></b>
+      <%= link_to 'Delete', comment_path(comment), method: :delete, data: { confirm: '削除してもいいですか？' } %>
+    </p>
   </div>
 <% end %>
 <%= render 'comments/form', comment: @comment %>
 
-<%= link_to 'Edit', edit_spot_path(@spot) %> |
-<%= link_to 'Back', spots_path %>

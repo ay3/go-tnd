@@ -11,15 +11,16 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :user_name %>
-    <%= f.text_field :user_name %>
-  </div>
+  <h4>コメント投稿</h4>
+  <table>
+    <tr>
+      <td>名前: </td><td><%= f.text_field :user_name %></td>
+    </tr>
+    <tr>
+      <td>コメント: </td><td><%= f.text_area :body %></td>
+    </tr>
+  </table>
 
-  <div class="field">
-    <%= f.label :body %>
-    <%= f.text_area :body %>
-  </div>
   <%= f.hidden_field :spot_id %>
 
   <div class="actions">
