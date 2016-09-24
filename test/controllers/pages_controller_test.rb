@@ -6,4 +6,9 @@ class PagesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+ test "should get top" do
+   get pages_top_url
+   assert_response :success
+ end
+
 end
