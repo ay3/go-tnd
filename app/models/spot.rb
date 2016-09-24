@@ -2,16 +2,19 @@ class Spot < ApplicationRecord
   has_many :comments
   mount_uploader :picture, PictureUploader
 
+  geocoded_by :address
+  after_validation :geocode, if: :address_changed?
+
   validates :name, 
   presence: { message: "何か入力して下さい。" },
   length: { in: 2..30, message: "2〜30文字で入力して下さい。" }
 
   validates :prefectures, length: { maximum: 3 }
-  validates :postcode,    length: { maximum: 7 },  numericality: { only_integer: true }
+  validates :postcode,    length: { maximum: 7 }
   validates :address,     length: { maximum: 30 }
-  validates :mapcode,     length: { maximum: 15 }, numericality: { only_integer: true }
-  validates :lat,         numericality: true
-  validates :lng,         numericality: true
+  validates :mapcode,     length: { maximum: 15 }
+  #validates :latitude,    numericality: true
+  #validates :longitude,   numericality: true
   validates :access,      length: { maximum: 100 }
 
   validates :category,

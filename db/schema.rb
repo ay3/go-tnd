@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160923123716) do
+ActiveRecord::Schema.define(version: 20160924101249) do
 
   create_table "comments", force: :cascade do |t|
     t.string   "user_name"
@@ -26,8 +26,8 @@ ActiveRecord::Schema.define(version: 20160923123716) do
     t.integer  "postcode"
     t.string   "address"
     t.integer  "mapcode"
-    t.decimal  "lat"
-    t.decimal  "lng"
+    t.decimal  "latitude"
+    t.decimal  "longitude"
     t.text     "access"
     t.string   "category"
     t.text     "url"

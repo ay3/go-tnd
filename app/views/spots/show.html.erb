@@ -10,7 +10,10 @@
     <p><b>住所: </b><br><%= @spot.postcode %> <%= @spot.address %></p>
     <p><b>Access: </b><br><%= @spot.access %></p>
     <p><b>Mapcode: </b><%= @spot.mapcode %></p>
-    <p><b>緯度経度: </b><%= @spot.lat %>, <%= @spot.lng %></p>
+    <p><b>緯度経度: </b><%= @spot.latitude %>, <%= @spot.longitude %></p>
+    <!-- <p>
+    <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@spot.latitude}%2C#{@spot.longitude}" %>
+    </p> -->
     <p><b>Category: </b><%= @spot.category %></p>
     <p><b>Memo: </b><%= @spot.memo %></p>
     <p><%= link_to '参考サイト', @spot.url %></p>

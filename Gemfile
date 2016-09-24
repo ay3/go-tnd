@@ -30,6 +30,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'carrierwave'
 gem 'mini_magick', '3.8.0'
 gem 'fog'
+gem 'geocoder'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
