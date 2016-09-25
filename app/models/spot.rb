@@ -1,4 +1,6 @@
 class Spot < ApplicationRecord
+  default_scope -> { order(tanada_level_id: :desc, prefecture_id: :asc) }
+
   has_many :comments
   belongs_to :tanada_level
   belongs_to :prefecture
