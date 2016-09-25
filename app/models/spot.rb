@@ -1,5 +1,7 @@
 class Spot < ApplicationRecord
   has_many :comments
+  belongs_to :tanada_level
+
   mount_uploader :picture, PictureUploader
 
   geocoded_by :address

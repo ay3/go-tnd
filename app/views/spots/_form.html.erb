@@ -56,6 +56,11 @@
     <%= f.text_field :category %>
   </div>
 
+ <div class="field">
+   <%= f.label :tanada_level_id, '分類' %>
+   <%= f.collection_select :tanada_level_id, TanadaLevel.all, :id, :name %>
+ </div>
+
   <div class="field">
     <%= f.label :url %>
     <%= f.text_area :url %>

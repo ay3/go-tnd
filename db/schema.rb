@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160924101249) do
+ActiveRecord::Schema.define(version: 20160925065906) do
 
   create_table "comments", force: :cascade do |t|
     t.string   "user_name"
@@ -33,8 +33,15 @@ ActiveRecord::Schema.define(version: 20160924101249) do
     t.text     "url"
     t.string   "picture"
     t.text     "memo"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.integer  "tanada_level_id"
+  end
+
+  create_table "tanada_levels", force: :cascade do |t|
+    t.string   "name",       null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

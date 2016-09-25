@@ -5,3 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+##### level(category) #####
+# coding: utf-8
+#TanadaLevel.create(:name => '棚田百選')
+#TanadaLevel.create(:name => '名もなき棚田')
+
+##### prefecture #####
+#require "csv"
+
+#CSV.foreach('db/prefecture.csv') do |row|
+#  Prefecture.create(:name => row[0], :region => row[1])
+#end
+
