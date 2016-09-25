@@ -12,9 +12,8 @@
 #TanadaLevel.create(:name => '名もなき棚田')
 
 ##### prefecture #####
-require "csv"
-
-CSV.foreach('db/prefecture.csv') do |row|
-  Prefecture.create(:name => row[0], :region => row[1])
-end
+#require "csv"
+#CSV.foreach('db/prefecture.csv') do |row|
+#  Prefecture.create(:name => row[0], :region => row[1])
+#end
 
