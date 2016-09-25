@@ -1,6 +1,7 @@
 class Spot < ApplicationRecord
   has_many :comments
   belongs_to :tanada_level
+  belongs_to :prefecture
 
   mount_uploader :picture, PictureUploader
 
