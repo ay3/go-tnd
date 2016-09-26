@@ -8,6 +8,7 @@ CarrierWave.configure do |config|
   }
 
   config.fog_public = false
+  config.fog_authenticated_url_expiration = 60
 
   case Rails.env
   when 'production'

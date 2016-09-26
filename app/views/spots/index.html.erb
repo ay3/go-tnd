@@ -4,7 +4,7 @@
   <div class="row">
     <% group.compact.each do |spot| %>
       <div class="col-md-4">
-        <%= if spot.picture? then image_tag spot.picture_url(:thumb) else image_tag 'thumb_ine.JPG' end %>
+        <%= if spot.picture? then image_tag spot.picture_url(:thumb) else image_tag 'thumb_ine.JPG', :size => '200x150' end %>
         <h4><%= link_to spot.name, spot %></h4>
         @<%= spot.prefecture_id %> <%= spot.tanada_level_id %>
       </div>
