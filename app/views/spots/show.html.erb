@@ -16,7 +16,7 @@
     <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@spot.latitude}%2C#{@spot.longitude}" %>
     </p> -->
     <p><b>Category: </b><%= @spot.category %></p>
-    <p><b>level(category): </b><%= @spot.tanada_level_id %></p>
+    <p><b>level(category): </b><%= @tanada_level.name %></p>
     <p><b>Memo: </b><%= @spot.memo %></p>
     <p><%= link_to '参考サイト', @spot.url %></p>
 
