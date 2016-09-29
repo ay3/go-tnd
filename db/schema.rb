@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160925112908) do
+ActiveRecord::Schema.define(version: 20160929124752) do
 
   create_table "comments", force: :cascade do |t|
     t.string   "user_name"
@@ -36,7 +36,6 @@ ActiveRecord::Schema.define(version: 20160925112908) do
     t.decimal  "latitude"
     t.decimal  "longitude"
     t.text     "access"
-    t.string   "category"
     t.text     "url"
     t.string   "picture"
     t.text     "memo"

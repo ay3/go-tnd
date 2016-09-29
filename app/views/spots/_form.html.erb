@@ -56,11 +56,6 @@
     <%= f.text_area :access %>
   </div>
 
-  <div class="field">
-    <%= f.label :category %>
-    <%= f.text_field :category %>
-  </div>
-
  <div class="field">
    <%= f.label :tanada_level_id, '分類' %>
    <%= f.collection_select :tanada_level_id, TanadaLevel.all, :id, :name %>
