@@ -25,7 +25,7 @@ class Spot < ApplicationRecord
   validates :memo,        length: { maximum: 500 }
 
   # file size check
-  validate :file_size
+  validate :file_size, if: "picture.nil?"
 
   def file_size
     if picture.file.size.to_f/(1000*1000) > 2
