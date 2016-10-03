@@ -31,6 +31,7 @@ gem 'carrierwave'
 gem 'mini_magick', '3.8.0'
 gem 'fog'
 gem 'geocoder'
+gem 'redcarpet'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

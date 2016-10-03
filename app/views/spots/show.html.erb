@@ -8,14 +8,14 @@
   <div class="col-md-9">
     <h3><%= @spot.name %></h3>
     <p><b>住所: </b><br><%= @spot.postcode %> <%= @spot.address %></p>
-    <p><b>Access: </b><br><%= @spot.access %></p>
+    <p><b>Access: </b><br><%= markdown @spot.access %></p>
     <p><b>Mapcode: </b><%= @spot.mapcode %></p>
     <p><b>緯度経度: </b><%= @spot.latitude %>, <%= @spot.longitude %></p>
     <!-- <p>
     <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@spot.latitude}%2C#{@spot.longitude}" %>
     </p> -->
     <p><b>level(category): </b><%= @tanada_level.name %></p>
-    <p><b>Memo: </b><%= @spot.memo %></p>
+    <p><b>Memo: </b><%= markdown @spot.memo %></p>
     <p><%= link_to '参考サイト', @spot.url %></p>
 
     <p>
