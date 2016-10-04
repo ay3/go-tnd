@@ -2,10 +2,15 @@ module ApplicationHelper
   require "redcarpet"
 
   def markdown(text)
-    options = {
+    render_options = {
+      escape_html:true,
+      hard_wrap: true
+    }
+    extensions = {
       #highlight: true
     }
-    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, options)
+    renderer = Redcarpet::Render::HTML.new(render_options)
+    markdown = Redcarpet::Markdown.new(renderer, extensions)
     markdown.render(text).html_safe
   end
 
