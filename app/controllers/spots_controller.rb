@@ -10,8 +10,6 @@ class SpotsController < ApplicationController
   # GET /spots/1
   # GET /spots/1.json
   def show
-    @comments = @spot.comments.all
-    @comment = @spot.comments.build
     @tanada_level = TanadaLevel.find_by_id(@spot.tanada_level_id)
   end
 

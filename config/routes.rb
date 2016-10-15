@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-  resources :comments
   get 'pages/info'
   get 'pages/top'
 
